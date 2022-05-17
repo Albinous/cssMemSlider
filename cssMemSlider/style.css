@@ -98,5 +98,44 @@ input {
   border: 0.1rem solid #fff;
 }
 
+#r1:checked ~ div .captions > p:nth-child(1) {
+  transform: translateX(0);
+  transform: translateY(0) rotateY(0deg);
+}
+
+#r2:checked ~ div .captions > p:nth-child(2) {
+  transform: translate(0, -100%) rotateY(0deg);
+}
+
+#r3:checked ~ div .captions > p:nth-child(3) {
+transform: translate(0, -200%) rotateY(0deg);
+}
+
+#r4:checked ~ div .captions > p:nth-child(4) {
+  transform: translate(0, -300%) rotateY(0deg);
+}
+
+#r1:checked ~ .slides > img:nth-child(1) {
+margin-left: 0%;
+}
+
+#r2:checked ~ .slides > img:nth-child(1) {
+margin-left: -100%;
+}
+
+#r3:checked ~ .slides > img:nth-child(1) {
+margin-left: -200%;
+}
+
+#r4:checked ~ .slides > img:nth-child(1) {
+margin-left: -300%;
+}
+
+#r1:checked ~ .slides > img:nth-child(1),
+#r2:checked ~ .slides > img:nth-child(2),
+#r3:checked ~ .slides > img:nth-child(3),
+#r4:checked ~ .slides > img:nth-child(4) {
+transform: skewY(0deg);
+}
 
 
