@@ -72,8 +72,8 @@ input {
 }
 
 .circle:active {
-  background: #fff;
-  border: 0.1rem solid #fff;
+  background: #ccc;
+  border: 0.1rem solid #ccc;
   cursor: pointer;
 }
 
