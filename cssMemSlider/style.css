@@ -143,8 +143,18 @@ transform: skewY(0deg);
     font-size: 0.75rem;
   }
 
+  .main {
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: center;
+  }
+
   .text {
-    max-width: 90%;
+    max-width: 100%;
+  }
+
+  #r4:checked ~ div .captions > p:nth-child(4) {
+    transform: translate(0, -150%) rotateY(0deg);
   }
 }
 
