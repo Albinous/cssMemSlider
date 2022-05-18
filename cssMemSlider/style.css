@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141414;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 34.625rem;
+  padding: 0 0.625rem;
+}
+
+.slides {
+  max-width: 33.625rem;
+  display: flex;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease-in;
+  transform: skewY(-10deg);
+}
+
+input {
+  display: none;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-top: 0.7rem;
+}
+
+.controls {
+  display: flex;
+  gap: 0.2rem;
+  margin-top: 0.35rem;
+}
+
+.controls > label {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.circle {
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  background: #72adff;
+  border: 0.1rem solid #72adff;
+}
+
+.circle:hover {
+  background: #fff;
+  border: 0.1rem solid #fff;
+}
+
+.circle:active {
+  background: #ccc;
+  border: 0.1rem solid #ccc;
+  cursor: pointer;
+}
+
+.text {
+  color: #fff;
+  transform: translateX(-30rem) rotateY(-65deg);
+  max-width: 70%;
+  transition: 0.5s ease-in;
+}
+
+#r1:checked ~ div .controls > label:nth-child(1) .circle,
+#r2:checked ~ div .controls > label:nth-child(2) .circle,
+#r3:checked ~ div .controls > label:nth-child(3) .circle,
+#r4:checked ~ div .controls > label:nth-child(4) .circle {
+  background: transparent;
+}
+
+#r1:checked ~ div .controls > label:nth-child(1) .circle:hover,
+#r2:checked ~ div .controls > label:nth-child(2) .circle:hover,
+#r3:checked ~ div .controls > label:nth-child(3) .circle:hover,
+#r4:checked ~ div .controls > label:nth-child(4) .circle:hover {
+  border: 0.1rem solid #fff;
+}
+
+#r1:checked ~ div .captions > p:nth-child(1) {
+  transform: translateX(0);
+  transform: translateY(0) rotateY(0deg);
+}
+
+#r2:checked ~ div .captions > p:nth-child(2) {
+  transform: translate(0, -100%) rotateY(0deg);
+}
+
+#r3:checked ~ div .captions > p:nth-child(3) {
+transform: translate(0, -200%) rotateY(0deg);
+}
+
+#r4:checked ~ div .captions > p:nth-child(4) {
+  transform: translate(0, -300%) rotateY(0deg);
+}
+
+#r1:checked ~ .slides > img:nth-child(1) {
+margin-left: 0%;
+}
+
+#r2:checked ~ .slides > img:nth-child(1) {
+margin-left: -100%;
+}
+
+#r3:checked ~ .slides > img:nth-child(1) {
+margin-left: -200%;
+}
+
+#r4:checked ~ .slides > img:nth-child(1) {
+margin-left: -300%;
+}
+
+#r1:checked ~ .slides > img:nth-child(1),
+#r2:checked ~ .slides > img:nth-child(2),
+#r3:checked ~ .slides > img:nth-child(3),
+#r4:checked ~ .slides > img:nth-child(4) {
+transform: skewY(0deg);
+}
+
+@media screen and (max-width:768px) {
+  body {
+    font-size: 0.75rem;
+  }
+
+  .main {
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .text {
+    max-width: 100%;
+  }
+
+  #r4:checked ~ div .captions > p:nth-child(4) {
+    transform: translate(0, -150%) rotateY(0deg);
+  }
+}
+
+
